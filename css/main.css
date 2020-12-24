@@ -153,13 +153,34 @@ form{
 }
 
 #form h2{
-    font-family: 'Source Code Pro', sans-serif;
     font-size: 3em;
     font-weight: bold;
-    text-transform: uppercase;
     margin: auto;
+    padding: 10px;
 }
 
 #form{
     background-color: #cad1ce;
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+label{
+    margin: 10px 0;
+    font-size: 80%;
+    color: #484b50;
+}
+
+legend{
+    font-size: 80%;
+}
+
+fieldset{
+    border: 1px #888d8b solid;
+}
+
+input{
+    margin: 10px 0;
+    background-color: #cad1ce;
+    border: 1px #888d8b solid;
 }
