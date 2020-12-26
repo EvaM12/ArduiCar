@@ -11,8 +11,10 @@ body{
 /*-------------------- Cabecera --------------------------*/
 header{
     color: white;
-    position: center;
     text-align: center;
+    width: 100%;
+    position: absolute;
+    height: 99%;
 }
 
 h1{
@@ -21,21 +23,26 @@ h1{
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 50px;
+    top: 20%;
+    position: relative;
+    text-align: center;
 }
 
 #cab{
     font-family: 'Merriweather', serif;
     font-style: italic;
     font-size: 2em;
-    margin-top: -20px;
+    top: 25%;
+    position: relative;
 }
 
 #flecha1 {
     width: 75px;
     height: 75px;
-    bottom: 100px;
+    top: 30%;
     background-image: url("/img/abajo-1.png");
     display: inline-block;
+    position: relative;
 
 }
 
@@ -51,6 +58,15 @@ h1{
 /*-------------------- Menu -------------------*/
 nav{
     text-align: center;
+    position: fixed;
+    bottom: -5px;
+    padding-bottom: 0;
+    width: 100%;
+}
+
+.fixed{
+    position:fixed;
+    top:0;
 }
 
 nav ul{
@@ -60,7 +76,7 @@ nav ul{
     width: 100%;
     padding: 0;
     max-width: 900px;
-    margin: 30px auto;
+    margin: 30px auto 0;
 }
 
 nav ul li{
@@ -88,8 +104,9 @@ nav ul li a:hover{
     display: inline-block;
     width: 100%;
     text-align: center;
-    position: relative;
-    margin-bottom: 300px;
+    position: absolute;
+    padding-bottom: 300px;
+    top: 100%;
 }
 
 article div{
@@ -103,6 +120,7 @@ article div{
 
 #pres img{
     width: 100%;
+    margin-bottom: 1em;
 }
 
 #pres{
@@ -127,12 +145,24 @@ article div{
 }
 
 section{
-    width: 49.5%;
+    width: 47%;
     display: inline-block;
 }
 
+section:nth-of-type(odd){
+    padding-right: 20px;
+}
+
+section:nth-of-type(even){
+    padding-left: 20px;
+}
+
+section:checked{
+    background-color: #f8e0b9;
+}
+
 #paises img{
-    width: 80%;
+    width: 100%;
 }
 
 section h2{
@@ -141,6 +171,8 @@ section h2{
     font-weight: bold;
     text-transform: uppercase;
     margin: auto;
+    width: 100%;
+    padding: 0.5em 0;
 }
 
 section p{
@@ -175,6 +207,7 @@ label{
 
 legend{
     font-size: 80%;
+    margin-bottom: 1em;
 }
 
 fieldset{
@@ -182,7 +215,24 @@ fieldset{
 }
 
 input{
-    margin: 10px 0;
     background-color: #cad1ce;
     border: 1px #888d8b solid;
+    font-size: 1.5em;
+    margin: 0.3em 0 1em;
+}
+
+fieldset input{
+    margin: 0;
+}
+
+button{
+    color: #484b50;
+    border: 1px solid #484b50;
+    background-color: #cad1ce;
+    margin-top: 2em;
+
+}
+
+button:hover{
+    background-color: #4096a5;
 }

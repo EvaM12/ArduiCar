@@ -19,17 +19,8 @@
     </div>
   </header>
 
-  <nav>
-    <ul>
-      <li class="menu"><a href="#pres">Introducción</a></li>
-      <li class="menu"><a href="#india">India</a></li>
-      <li class="menu"><a href="#mexico">México</a></li>
-      <li class="menu"><a href="#nzelanda">Nueva Zelanda</a></li>
-      <li class="menu"><a href="#peru">Perú</a></li>
-      <li class="menu"><a href="#islandia">Islandia</a></li>
-      <li class="menu"><a href="#japon">Japón</a></li>
-    </ul>
-  </nav>
+
+
   <article id="cuerpo">
     <div id="pres">
       <h2>No sueñes, vuela de verdad</h2>
@@ -99,7 +90,21 @@
       </form>
     </div>
   </article>
+
+  <nav>
+    <ul>
+      <li class="menu"><a href="#pres">Introducción</a></li>
+      <li class="menu"><a href="#india">India</a></li>
+      <li class="menu"><a href="#mexico">México</a></li>
+      <li class="menu"><a href="#nzelanda">Nueva Zelanda</a></li>
+      <li class="menu"><a href="#peru">Perú</a></li>
+      <li class="menu"><a href="#islandia">Islandia</a></li>
+      <li class="menu"><a href="#japon">Japón</a></li>
+    </ul>
+  </nav>
+
   <script>
+    /*-----------------Fondo de los paises conel checkbox---------------------*/
     $("#pais1").on("change", function(){
       let that = this;
       $("#india").css("background-color", function(){
@@ -141,7 +146,25 @@
         return that.checked ? "#f8e0b9" : "";
       });
     });
+    /*--------------------- Posicion del menu --------------------------*/
+    posicionarMenu();
 
+    $(window).scroll(function() {
+      posicionarMenu();
+    });
+
+    function posicionarMenu() {
+      let altura_del_header = $('.header').outerHeight(true);
+      let altura_del_menu = $('.menu').outerHeight(true);
+
+      if ($(window).scrollTop() >= altura_del_header){
+        $('.menu').addClass('fixed');
+        $('#cuerpo').css('margin-top', (altura_del_menu) + 'px');
+      } else {
+        $('.menu').removeClass('fixed');
+        $('#cuerpo').css('margin-top', '0');
+      }
+    }
 
   </script>
 </body>
