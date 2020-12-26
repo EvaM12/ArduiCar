@@ -6,6 +6,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
+    font-size: 14px;
 }
 /*-------------------- Cabecera --------------------------*/
 header{
@@ -60,7 +61,6 @@ nav ul{
     padding: 0;
     max-width: 900px;
     margin: 30px auto;
-
 }
 
 nav ul li{
@@ -90,7 +90,6 @@ nav ul li a:hover{
     text-align: center;
     position: relative;
     margin-bottom: 300px;
-    margin-top: -40px;
 }
 
 article div{
@@ -124,10 +123,11 @@ article div{
     font-family: 'Merriweather', serif;
     font-style: italic;
     margin-top: -20px;
+    font-size: 1.5em;
 }
 
 section{
-    width: 49%;
+    width: 49.5%;
     display: inline-block;
 }
 
@@ -146,6 +146,8 @@ section h2{
 section p{
     font-family: 'Merriweather', serif;
     font-style: italic;
+    font-size: 1.5em;
+
 }
 
 form{
