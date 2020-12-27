@@ -146,6 +146,16 @@
         return that.checked ? "#f8e0b9" : "";
       });
     });
+
+    $("#japon").click(function(){ //revisar la estructura, pero este el es comienzo
+      $(this).removeClass("noclick");
+      $(this).addClass("click");
+      $("#pais6").change("on"); //revisar
+      $("#japon").click(function(){
+        $(this).removeClass("click");
+        $(this).addClass("noclick");
+      });
+    });
     /*--------------------- Posicion del menu --------------------------*/
     posicionarMenu();
 
