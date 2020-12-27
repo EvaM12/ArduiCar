@@ -207,11 +207,12 @@ label{
 
 legend{
     font-size: 80%;
-    margin-bottom: 1em;
 }
 
 fieldset{
     border: 1px #888d8b solid;
+    width: 98%;
+    margin-left: -1px;
 }
 
 input{
@@ -219,10 +220,17 @@ input{
     border: 1px #888d8b solid;
     font-size: 1.5em;
     margin: 0.3em 0 1em;
+    width: 100%;
+    padding: 0.5em 0;
 }
 
 fieldset input{
-    margin: 0;
+    width: auto;
+    margin: 1em 0 0;
+}
+
+fieldset label{
+    padding-right: 5px;
 }
 
 button{
@@ -230,7 +238,9 @@ button{
     border: 1px solid #484b50;
     background-color: #cad1ce;
     margin-top: 2em;
-
+    width: 50%;
+    padding: 1em 0;
+    text-transform: uppercase;
 }
 
 button:hover{
