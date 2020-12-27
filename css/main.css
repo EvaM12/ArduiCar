@@ -249,9 +249,9 @@ button:hover{
 }
 
 .click{
-    background-color: orange;
+    background-color: #f8e0b9;
 }
 
 .noclick{
-    background-color: rebeccapurple;
+    background-color: white;
 }

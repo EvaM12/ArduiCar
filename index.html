@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <title>Document</title>
+  <title>Proyecto IAW</title>
 </head>
 <body>
   <header class="header">
@@ -146,16 +146,92 @@
         return that.checked ? "#f8e0b9" : "";
       });
     });
+/*--------------------- Cambiar el fondo sin checkbox -------------------------*/
+    let contador = 0;
 
-    $("#japon").click(function(){ //revisar la estructura, pero este el es comienzo
-      $(this).removeClass("noclick");
-      $(this).addClass("click");
-      $("#pais6").change("on"); //revisar
-      $("#japon").click(function(){
-        $(this).removeClass("click");
-        $(this).addClass("noclick");
-      });
-    });
+    function fondo(){
+      if(contador % 2 == 0){
+        $("#japon").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais6").attr("checked", true);
+        });
+
+        $("#islandia").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais5").attr("checked", true);
+        });
+
+        $("#peru").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais4").attr("checked", true);
+        });
+
+        $("#nzelanda").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais3").attr("checked", true);
+        });
+
+        $("#mexico").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais2").attr("checked", true);
+        });
+
+        $("#india").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais1").attr("checked", true);
+        });
+      }else{
+        $("#japon").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais6").attr("checked", false);
+        });
+
+        $("#islandia").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais5").attr("checked", false);
+        });
+
+        $("#peru").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais4").attr("checked", false);
+        });
+
+        $("#nzelanda").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais3").attr("checked", false);
+        });
+
+        $("#mexico").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais2").attr("checked", false);
+        });
+
+        $("#india").click(function() { //revisar la estructura, pero este el es comienzo
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais1").attr("checked", false);
+        });
+      }
+      contador = contador +1;
+    }
+
+    setInterval(function(){
+
+      fondo();
+
+    },Infinity);
+
     /*--------------------- Posicion del menu --------------------------*/
     posicionarMenu();
 
