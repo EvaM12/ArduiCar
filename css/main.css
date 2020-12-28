@@ -3,7 +3,7 @@
 body{
     background-color: rgba(139, 0, 139, 0.36);
     background-image: url("/img/fondo.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 99%;
@@ -66,9 +66,10 @@ nav{
  }
 
 .fixed{
-     position:fixed;
-     top: 0;
-     margin-left: -8px;
+    position:fixed;
+    top: 0;
+    margin-left: -8px;
+    height: 100px;
 }
 
 nav ul{

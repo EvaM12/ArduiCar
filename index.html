@@ -156,44 +156,104 @@
       });
     });
 /*--------------------- Cambiar el fondo sin checkbox -------------------------*/
-    let contador = 0;
+    let contadorindia = 0;
+    let contadormexico = 0;
+    let contadornzelanda = 0;
+    let contadorperu = 0;
+    let contadorislandia = 0;
+    let contadorjapon = 0;
 
-    function fondo(){
-      if(contador % 2 == 0){
-        $("#japon").click(function() {
+    function fondoindia(){
+      if (contadorindia % 2 == 0) {
+        $("#india").click(function () {
           $(this).removeClass("noclick");
           $(this).addClass("click");
-          $("#pais6").attr("checked", true);
+          $("#pais1").attr("checked", true);
         });
-
-        $("#islandia").click(function() {
-          $(this).removeClass("noclick");
-          $(this).addClass("click");
-          $("#pais5").attr("checked", true);
+      }else{
+        $("#india").click(function() {
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais1").attr("checked", false);
         });
+      }
+      contadorindia = contadorindia +1;
+    }
 
-        $("#peru").click(function() {
-          $(this).removeClass("noclick");
-          $(this).addClass("click");
-          $("#pais4").attr("checked", true);
-        });
-
-        $("#nzelanda").click(function() {
-          $(this).removeClass("noclick");
-          $(this).addClass("click");
-          $("#pais3").attr("checked", true);
-        });
-
-        $("#mexico").click(function() {
+    function fondomexico(){
+      if (contadormexico % 2 == 0) {
+        $("#mexico").click(function () {
           $(this).removeClass("noclick");
           $(this).addClass("click");
           $("#pais2").attr("checked", true);
         });
+      }else{
+        $("#mexico").click(function() {
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais2").attr("checked", false);
+        });
+      }
+      contadormexico = contadormexico +1;
+    }
 
-        $("#india").click(function() {
+    function fondonzelanda(){
+      if (contadornzelanda % 2 == 0) {
+        $("#nzelanda").click(function () {
           $(this).removeClass("noclick");
           $(this).addClass("click");
-          $("#pais1").attr("checked", true);
+          $("#pais3").attr("checked", true);
+        });
+      }else{
+        $("#nzelanda").click(function() {
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais3").attr("checked", false);
+        });
+      }
+      contadornzelanda = contadornzelanda +1;
+    }
+
+    function fondoperu(){
+      if (contadorperu % 2 == 0) {
+        $("#peru").click(function () {
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais4").attr("checked", true);
+        });
+      }else{
+        $("#peru").click(function() {
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais4").attr("checked", false);
+        });
+      }
+      contadorperu = contadorperu +1;
+    }
+
+    function fondoislandia(){
+      if (contadorislandia % 2 == 0) {
+        $("#islandia").click(function () {
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais5").attr("checked", true);
+        });
+      }else{
+        $("#islandia").click(function() {
+          $(this).removeClass("click");
+          $(this).addClass("noclick");
+          $("#pais5").attr("checked", false);
+        });
+      }
+      contadorislandia = contadorislandia +1;
+    }
+
+    function fondojapon(){
+      if (contadorjapon % 2 == 0) {
+        $("#japon").click(function () {
+          $(this).removeClass("noclick");
+          $(this).addClass("click");
+          $("#pais6").attr("checked", true);
         });
       }else{
         $("#japon").click(function() {
@@ -201,42 +261,17 @@
           $(this).addClass("noclick");
           $("#pais6").attr("checked", false);
         });
-
-        $("#islandia").click(function() {
-          $(this).removeClass("click");
-          $(this).addClass("noclick");
-          $("#pais5").attr("checked", false);
-        });
-
-        $("#peru").click(function() {
-          $(this).removeClass("click");
-          $(this).addClass("noclick");
-          $("#pais4").attr("checked", false);
-        });
-
-        $("#nzelanda").click(function() {
-          $(this).removeClass("click");
-          $(this).addClass("noclick");
-          $("#pais3").attr("checked", false);
-        });
-
-        $("#mexico").click(function() {
-          $(this).removeClass("click");
-          $(this).addClass("noclick");
-          $("#pais2").attr("checked", false);
-        });
-
-        $("#india").click(function() {
-          $(this).removeClass("click");
-          $(this).addClass("noclick");
-          $("#pais1").attr("checked", false);
-        });
       }
-      contador = contador +1;
+      contadorjapon = contadorjapon +1;
     }
 
     setInterval(function(){
-      fondo();
+      fondoindia();
+      fondomexico();
+      fondonzelanda();
+      fondoperu();
+      fondoislandia();
+      fondojapon();
     },Infinity);
 
     /*--------------------- Posicion del menu --------------------------*/
