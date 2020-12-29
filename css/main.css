@@ -41,14 +41,14 @@ h1{
     width: 75px;
     height: 75px;
     top: 30%;
-    background-image: url("/img/abajo-1.png");
+    background-image: url("../img/abajo-1.png");
     display: inline-block;
     position: relative;
 
 }
 
 #flecha1:hover{
-    background-image: url("/img/abajo-2.png");
+    background-image: url("../img/abajo-2.png");
     position: center;
 }
 
