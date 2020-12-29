@@ -275,19 +275,19 @@
     },Infinity);
 
     /*--------------------- Posicion del menu --------------------------*/
-    posicionarMenu();
+    posMenu();
 
     $(window).scroll(function() {
-      posicionarMenu();
+      posMenu();
     });
 
-    function posicionarMenu() {
-      let altura_del_header = $('.header').outerHeight(true);
-      let altura_del_menu = $('.menu').outerHeight(true);
+    function posMenu() {
+      let altura_del_header = $(".header").outerHeight(true);
+      let altura_del_menu = $(".menu").outerHeight(true);
 
       if ($(window).scrollTop() >= altura_del_header){
-        $('.menu').removeClass('fixed');
-        $('#cuerpo').css('margin-top', (altura_del_menu) + 'px');
+        $(".menu").removeClass("fixed");
+        $("#cuerpo").css("margin-top", (altura_del_menu) + "px");
         $("#menu").css("list-style", "none");
         $("#menu").css("display", "inline-block");
         $("#menu").css("background-color", "#474b50");
@@ -302,7 +302,7 @@
         $(".menu").css("position", "relative");
 
       } else {
-        $('.menu').addClass('fixed');
+        $(".menu").addClass('fixed');
         $('#cuerpo').css('margin-top', '0');
         $('.menu').css('margin-top', '100%');
         if($(window).scrollTop() < altura_del_header){
