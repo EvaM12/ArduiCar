@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles</title>
+    
+    <link rel="shortcut icon" href="./icono.png">
+
+    <link rel="stylesheet" href="http://localhost/proyecto/app/css/sensor-menu.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/proyecto/app/css/container.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" class="checkbox" id="check">
+    <label class="menu" for="check">|||</label>
+    <div class="left-panel">
+        <h2>ArduiCar</h2>
+        <ul>
+            <a href="http://localhost/proyecto/php/usuario.php"><li>Datos de usuario</li></a> <!--http://localhost/proyecto/php/usuario.php -->
+            <a href="manual coche"><li>Activar coche</li></a> <!--http://localhost/proyecto/php/cierre.php -->
+            <a href="manual extras"><li>Activar sensores</li></a> <!--http://localhost/proyecto/php/cierre.php -->
+            <a href="http://localhost/proyecto/php/cierre.php"><li>Cerrar sesión</li></a>
+        </ul>
+    </div>
+
+    <div id="centro">
+        <div id="control">
+            <p class="triangulo_sup"></p>
+            <p class="triangulo_inf"></p>
+            <p class="triangulo_izq"></p>
+            <p class="triangulo_der"></p>
+        </div>
+        
+        <div id="sensores">
+            <h3>Sensores</h3>
+            <a id="luz">&nbsp;</a>
+            <a id="temp">
+                20.5 °C
+            </a>
+            <a id="prox">Proximidad</a>
+            <a id="faros">Faros</a>
+            
+        </div>
+        <div class="container">
+            <i class="fa fa-angle-left" id="left">&nbsp;</i><!--Emite la funcion de giro a la izquierda-->
+            <i class="fa fa-angle-down" id="reverse"></i><!--Emite la funcion de reverso-->
+            <i class="fa" id="right">&nbsp;&nbsp;<i class="fa fa-angle-right"></i></i><!--Emite la funcion de giro a la derecha-->
+            <i class="fa fa-angle-up" id="stop"></i><!--Emite la funcion de avance-->
+        </div>
+        <i class="fa stop" id="forward">STOP</i> <!--Emite la funcion de parada-->
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.2/socket.io.min.js"></script>
+<script src="http://localhost/proyecto/app/app.js"></script>
+
+      <script>
+            $(function() {
+                var socket = io.connect("http://localhost:3000");
+                    
+                socket.on('light', function(lightSensor){
+                    $("#light").val(lightSensor);
+                    console.log($("#light").val());
+                    if(($("#light").val()) > 70){
+                        $("#centro4").css("background-color", "green");
+                        console.log("mucho");
+                    }
+                    if(($("#light").val()) <= 70 && ($("#light").val()) >= 30){
+                        $("#centro4").css("background-color", "yellow");
+                        console.log("medio");
+                    }
+                    if(($("#light").val()) < 30){
+                        $("#luz").css("background-color", "red");
+                        console.log("poco");
+                    }
+                });
+                socket.on('proximity', function(proximity){
+                    $("#proximity").val(proximity);
+                    console.log($("#proximity").val());
+                    if(($("#proximity").val()) >= 20){
+                        $("#centro").css("background-color", "green");
+                        console.log("lejos");
+                    }
+                    if(($("#proximity").val()) <= 20 && ($("#proximity").val()) >= 10){
+                        $("#centro").css("background-color", "yellow");
+                        console.log("medio");
+                    }
+                    if(($("#proximity").val()) < 10){
+                        $("#centro").css("background-color", "red");
+                        console.log("cerca");
+                    }
+                });
+
+                socket.on('proximity2', function(proximity2){
+                    $("#proximity2").val(proximity2);
+                    console.log($("#proximity2").val());
+                    if(($("#proximity2").val()) >= 20){
+                        $("#centro2").css("background-color", "green");
+                        console.log("lejos");
+                    }
+                    if(($("#proximity2").val()) <= 20 && ($("#proximity2").val()) >= 10){
+                        $("#centro2").css("background-color", "yellow");
+                        console.log("medio");
+                    }
+                    if(($("#proximity2").val()) < 10){
+                        $("#centro2").css("background-color", "red");
+                        console.log("cerca");
+                    }
+                });
+
+                socket.on('proximity3', function(proximity3){
+                    $("#proximity3").val(proximity3);
+                    console.log($("#proximity3").val());
+                    if(($("#proximity3").val()) >= 20){
+                        $("#centro3").css("background-color", "green");
+                        console.log("lejos");
+                    }
+                    if(($("#proximity3").val()) <= 20 && ($("#proximity3").val()) >= 10){
+                        $("#centro3").css("background-color", "yellow");
+                        console.log("medio");
+                    }
+                    if(($("#proximity3").val()) < 10){
+                        $("#centro3").css("background-color", "red");
+                        console.log("cerca");
+                    }
+                });
+            });
+            //npm install nodebots-interchange -g
+            //interchange install hc-sr04 -a uno -p COM5 --firmata
+        </script>
+</html>

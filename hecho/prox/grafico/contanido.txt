@@ -1,0 +1,6 @@
+en esta carpeta estan:
+    main.js en el que se recogen los valores del LDR y los emite mediante socket
+    index.html en el que se conecta con el puerto 3000 de la maquina y muestra por consola el valor del LDR.
+        tambien muestra dos graficas en donde se muestran el valor del LDR y un numero aleatorio entre 0 y 1.
+
+        en la segunda grafica esta como editar el estilo de la grafica

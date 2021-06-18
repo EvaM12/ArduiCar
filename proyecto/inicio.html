@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArdiCar</title>
+    <link rel="shortcut icon" href="./img/icono.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <article id="log">
+        <h2>ArduiCar</h2>
+        <form action="http://localhost/proyecto/php/login.php" method="post">
+            <label for="login">Nombre de usuario</label><br>
+            <input type="text" name="login" id="login" placeholder="Nombre de usuario" required>
+            <br>
+            <label for="passwd" id="label2">Contraseña</label><br>
+            <input type="password" name="passwd" id="passwd" placeholder="Contraseña" required>
+            <br>
+            <a href="./php/contraseña.php">¿Olvidó la contraseña?</a><!--contraseña perdida-->
+            <div class="g-recaptcha" 
+                data-sitekey="6LeaVaQaAAAAAFl5-ME1rwMmraqX3KdPVErdsDx7" 
+                >Submit</div>
+            <button>Iniciar sesión</button>
+        </form>
+        <a href="php/crear.php" id="crear"><section>
+            Crear Usuario
+        </section></a>
+    </article>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=6LdyVKQaAAAAAFAC5faVAruPPoPS67Fh2nMIcZJ0"></script>-->
+    
+    <script>
+        $("#login").on("click", function(){
+            $("#login").css("border-bottom", "2px solid #40fdf7");
+        });
+
+        $("#passwd").on("click", function(){
+            $("#passwd").css("border-bottom", "2px solid #40fdf7");
+        });
+    </script>
+</body>
+</html>

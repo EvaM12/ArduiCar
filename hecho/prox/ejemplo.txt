@@ -1,0 +1,2 @@
+en esta carpeta esta el codigo para recoger los datos que entran por el sensor de proximidad y 
+se envia a una pagina weben localhost:3000

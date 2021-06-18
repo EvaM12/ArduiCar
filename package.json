@@ -1,0 +1,20 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "firmata": "firmata-party uno --debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "johnny-five": "^2.0.0",
+    "socket.io": "^3.0.4",
+    "firmata": "^2.3.0",
+    "firmata-party": "^2.0.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

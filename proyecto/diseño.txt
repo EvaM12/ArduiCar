@@ -1,0 +1,24 @@
+index.html
+	formulario de acceso
+	en el fondo habra una imgen de pantalla completa de un circuito (estilo nascar)
+	el formulario estara en el centro de la ventana en todo momento con un fondo grisaceo semitransparente 
+
+
+login.php
+	se verifican las credenciales de acceso
+	si hay mas de tres intentos fallido se redirecciona a otra pagina en la que no permita el acceso.
+	por cada fallo se devolvera a la pagina anterior y se contaran los fallos
+	si es correcto de mostrara la ventana de controles
+
+crear.php
+	formulario en el que se recogen las credenciales del usuario a crear.
+	las envia a crear2.php
+	si las credenciales existen de antes muestra que exite el usuario
+	y si no le envia a la pagina de index.html
+
+crear2.php 
+	recibe los datos de crear.php y valida el usuario
+
+controles.html
+	se mostraran los cuadros de mando en el lateral izquierdo y en el derecho los controles adicionales(focos, sirena, etc)
+	si el tamaño de la ventana se vuelve estrecho pasaran los controles a estar arriba y los extras abajo

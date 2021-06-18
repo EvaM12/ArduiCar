@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles</title>
+    <link rel="shortcut icon" href="./img/icono.png">
+    <link rel="stylesheet" href="css/controles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+<input type="checkbox" class="checkbox" id="check">
+<label class="menu" for="check">|||</label>
+<div class="left-panel">
+    <h2>ArduiCar</h2>
+    <ul>
+        <a href="perfil"><li>Datos de usuario</li></a>
+        <a href="manual coche"><li>Activar coche</li></a>
+        <a href="manual extras"><li>Activar sensores</li></a>
+        <a href="./php/cierre.php"><li>Cerrar sesión</li></a>
+    </ul>
+</div>
+
+<div id="centro">
+    <div id="control">
+        <article id="mandos">
+            <figure id="n1" class="null"></figure>
+            <figure id="up"><a href="">↑</a></figure>
+            <figure id="n2" class="null"></figure>
+            <figure id="left"><a href="">←</a></figure>
+            <p class="triangulo_sup"></p>
+            <p class="triangulo_inf"></p>
+            <p class="triangulo_izq"></p>
+            <p class="triangulo_der"></p>
+            <figure id="rigth"><a href="">→</a></figure>
+            <figure id="n4" class="null"></figure>
+            <figure id="down"><a href="">↓</a></figure>
+            <figure id="n5" class="null"></figure>
+        </article>
+    </div>
+    <div id="sensores">
+        <h3>Sensores</h3>
+        <a href="http://localhost:3000/" id="luz">Luz</a>
+        <a id="temp">Temperatura</a>
+        <a id="prox">Proximidad</a>
+        <a id="faros" href="./cmd.php#calc">Faros</a> <!--no funciona -->
+        
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    //#faros toggleClass
+    $("#faros").on("click", function (e){
+        $("#faros").toggleClass("onoff");
+    })
+</script>
+</body>
+</html>

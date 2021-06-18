@@ -1,0 +1,314 @@
+@import url(https://allfont.es/allfont.css?fonts=good-times);
+
+body{
+    font-size: 20px;
+    font-family: helvetiva, sans-serif;
+    background-image: url("http://localhost/proyecto/img/fondo_controles2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+br{
+    font-size: 0.75em;
+}
+
+.menu {
+    width: 2.2rem;
+    height: 2.7rem;
+    background: #BCEAF188;
+    border-radius: 0 0.5rem 0.5rem 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    transition: left 0.5s;
+    z-index: 10;
+}
+
+.checkbox:checked ~ .menu {
+    left: 350px;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: #40fdf7cc;
+}
+
+.left-panel {
+    width: 350px;
+    height: 100%;
+    background:  #BCEAF188;
+    position: absolute;
+    top: 0;
+    left: -350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s;
+    z-index: 10;
+}
+
+.checkbox:checked ~ .left-panel {
+    left: 0;
+}
+
+.checkbox {
+    display: none;
+}
+
+.left-panel h2{
+    font-family: "good times", verdana, sans-serif;
+    text-align: center;
+    font-size: 2.25em;
+    margin: 15% 10px 10%;
+    position: absolute;
+    top: 0;
+}
+
+.left-panel a{
+    position: absolute;
+    top: 30%;
+    width: 85%;
+    height: 25px;
+    left: 6%;
+}
+
+.left-panel a li {
+    list-style: none;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #00c0a5;
+    border-radius: 0.5rem;
+    border: 2px solid #00c0a5;
+    width: 85%;
+    height: 25px;
+    left: 6%;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.left-panel a:first-of-type{
+    top: 25%;
+}
+
+.left-panel a:nth-child(2){
+    top:35%;
+}
+
+.left-panel a li:hover{
+    background-color: #1b2437;
+}
+
+.left-panel a:nth-child(3){
+    top: 45%;
+    margin-bottom: 2%;
+}
+
+.left-panel a:nth-child(4){
+    top: 55%;
+    margin-bottom: 2%;
+}
+
+.left-panel a:last-child{
+    top: 90%;
+}
+
+.centro {
+    background-color: rgba(186, 186, 186, 0.8);
+    position: absolute;
+    margin: auto;
+    padding: 0 15px;
+    left: 25%;
+    right: 25%;
+    top: 5%;
+    width: 50%;
+    height: 90%;
+    min-width: 500px;
+    border-radius: 25px;
+    color: black;
+}
+
+.centro h2{
+    font-family: "good times", verdana, sans-serif;
+    text-align: center;
+    font-size: 1.75em;
+    position: relative;
+    margin: 5%;
+}
+
+#titulo{
+    font-family: "good times", verdana, sans-serif;
+    text-align: center;
+    font-size: 2.25em;
+    position: relative;
+    margin: 5%;
+}
+.centro figcaption{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+img{
+    width: 20%;
+    height: 20%;
+}
+#changepasswd{
+    font-size: 1.05em;
+    /*margin: 50px 0;*/
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    width: 80%;
+    text-decoration: none;
+    text-align: center;
+}
+
+#changepasswd:hover{
+    color: #00c0a5;
+}
+
+div section{
+    font-size: 1.25em;
+    width: 70%;
+    border-radius: 25px;
+    height: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    margin: 10px 16%;
+    position: relative;
+    top: 10%;
+}
+
+b{
+    margin-left: 6%;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+br{
+    font-size: 1.5em;
+}
+table, td, th{
+    text-align:justify;
+}
+
+#tabla{
+    width: 100%;
+    text-align: center;
+}
+
+table{
+    text-align: center;
+    width: 100%;
+}
+
+th{
+    width: 40%;
+    padding-bottom: 15px;
+}
+
+td{
+    padding-bottom: 15px;
+
+}
+
+#create{
+    font-size: 1.05em;
+    background-color: #40fdf7;
+    width: 75%;
+    border-radius: 25px;
+    height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    margin: 5px 13%;
+    border: #40fdf7 2px solid;
+}
+
+article button:hover{
+    font-size: 1.05em;
+    background-color: #00c0a5;
+    width: 75%;
+    border-radius: 25px;
+    height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    margin: 55px 13% 5px;
+    border: #00c0a5 2px solid;
+}
+
+#create:hover{
+    font-size: 1.05em;
+    background-color: #00c0a5;
+    width: 75%;
+    border-radius: 25px;
+    height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    margin: 5px 13%;
+    border: #00c0a5 2px solid;
+}
+
+input{
+    height: 20px;
+    border: 1px solid transparent;
+    border-bottom: 2px solid #00c0a5;
+    background-color: transparent;
+    width: 80%;
+    margin: 0 10%;
+    font-size: 18px;
+    outline: none;
+    padding: 0 5px;
+}
+
+@media(max-width: 600px){
+    div{
+        background-color: rgba(186, 186, 186, 0.6);
+        position: center;
+        margin: auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        top: 5%;
+    }
+
+    div h2{
+        margin: 9% 10px 7%;
+    }
+    #changepasswd{
+        font-size: 1.05em;
+        /*margin: 50px 0;*/
+        text-transform: uppercase;
+        font-weight: bold;
+        color: black;
+        width: 80%;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    #changepasswd:hover{
+        color: #00c0a5;
+    }
+
+    div section{
+        font-size: 1.05em;
+        width: 70%;
+        border-radius: 25px;
+        height: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        outline: none;
+        margin: 10px 16%;
+        position: relative;
+        top: 25%;
+    }
+}

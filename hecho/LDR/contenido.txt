@@ -1,0 +1,8 @@
+en esta carpeta esta :
+    obtencion de datos de un LDR mediante johnny-five
+    envio al fichero index.html con sochet.io
+    en index.html se muestra con un input los valores que va recogiendo
+    script en el que se define que muestre en el input los valores del LDR, muestre el valor 
+        por la consola, y que dependiendo de si el valor obtenido es >= a 70 o no cambie el 
+        fondo del div
+    

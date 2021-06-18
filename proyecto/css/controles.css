@@ -1,0 +1,376 @@
+@import url(https://allfont.es/allfont.css?fonts=good-times);
+
+body{
+    font-size: 20px;
+    font-family: helvetiva, sans-serif;
+    background-image: url("../img/fondo_controles2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.menu {
+    width: 2.2rem;
+    height: 2.7rem;
+    background: #40fdf788;
+    border-radius: 0 0.5rem 0.5rem 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    transition: left 0.5s;
+    z-index: 10;
+}
+
+.checkbox:checked ~ .menu {
+    left: 350px;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.left-panel {
+    width: 350px;
+    height: 100%;
+    background:  #40fdf788;
+    position: absolute;
+    top: 0;
+    left: -350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s;
+    z-index: 10;
+}
+
+.checkbox:checked ~ .left-panel {
+    left: 0;
+}
+
+.checkbox {
+    display: none;
+}
+
+.left-panel h2{
+    font-family: "good times", verdana, sans-serif;
+    text-align: center;
+    font-size: 2.25em;
+    margin: 15% 10px 10%;
+    position: absolute;
+    top: 0;
+}
+
+.left-panel a{
+    position: absolute;
+    top: 30%;
+    width: 85%;
+    height: 25px;
+    left: 6%;
+}
+
+.left-panel a li {
+    list-style: none;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #00c0a5;
+    border-radius: 0.5rem;
+    border: 2px solid #00c0a5;
+    width: 85%;
+    height: 25px;
+    left: 6%;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.left-panel a:first-of-type{
+    top: 25%;
+}
+
+.left-panel a:nth-child(2){
+    top:35%;
+}
+
+.left-panel a li:hover{
+    background-color: #1b2437;
+}
+
+.left-panel a:nth-child(3){
+    top: 45%;
+    margin-bottom: 2%;
+}
+
+.left-panel a:nth-child(4){
+    top: 55%;
+    margin-bottom: 2%;
+}
+
+.left-panel a:last-child{
+    top: 90%;
+}
+
+#centro{
+    background-color: rgba(186, 186, 186, 0.6);
+    width: 85%;
+    padding: 20px;
+    /*min-width: 550px;*/
+    min-height: 500px;
+    position: fixed;
+    top: 8%;
+    height: 80%;
+    left: 6%;
+    right: 7%;
+    border-radius: 25px;
+    font-size: 1.2em;
+    min-width: 1000px;
+}
+
+#control{
+    background-color: rgba(131, 122, 122, 0.85);
+    position: absolute;
+    width: 40%;
+    height: 85%;
+    margin: 1.5% 1.5% 1.5% 2%;
+    display: inline-block;
+    border-radius: 100%;
+    min-width: 500px;
+    border: 5px solid rgb(112, 104, 104);
+}
+
+#sensores{
+    background-color: rgba(131, 122, 122, 0.85);
+    position: absolute;
+    width: 47%;
+    height: 85%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    margin-left: -1%;
+    left: 50%;
+    display: inline-block;
+    border-radius: 25px;
+    min-width: 500px;
+    border: 5px solid rgb(112, 104, 104);
+}
+
+#sensores h3{
+    text-align: center;
+    font-family: "good times", verdana, sans-serif;
+    font-size: 2em;
+    position: absolute;
+    top: 5%;
+    margin: 3% 25%;
+}
+
+#sensores a{
+    background-color: #00c0a5;
+    position: relative;
+    width: 41%;
+    height: 55px;
+    margin: 2%;
+    margin-left: 5% !important;
+    display: inline-block;
+    border-radius: 25px;
+    text-align: center;
+    top: 25%;
+    border: 3px solid #00c0a5;
+    font-size: 1.5em;
+    padding: 15px 0 0;
+    text-decoration: none;
+    color: white;
+}
+
+#sensores a:hover{
+    background-color: #1b2437;
+}
+
+#sensores a:nth-child(4), #sensores a:nth-child(5){
+    top: 30%;
+}
+
+#sensores a:nth-child(7), #sensores a:nth-child(6){
+    top: 35%;
+}
+
+section{
+    display: inline-block;
+    height: 65%;
+    padding: 15px;
+    border-radius: 25px;
+    min-width: 200px;
+    min-height: 300px;
+}
+
+#mandos{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 2%;
+    right: 5%;
+    top: 0;
+}
+
+#mandos figure{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#mandos figure:nth-child(1), #mandos figure:nth-child(3),
+#mandos figure:nth-child(10), #mandos figure:nth-child(12){
+    width: 175px;
+    height: 175px;
+    border: 3px solid transparent;
+}
+
+#mandos #up{
+    width: 100px;
+    height: 145px;
+    background-image: linear-gradient(to bottom, #00c0a5 45%, #1b2437);
+    border-bottom: 2px solid #1b2437;
+    border-top: 2px solid #00c0a5;
+    border-left: 2px solid #00c0a5;
+    border-right: 2px solid #00c0a5;
+    position: absolute;
+    margin-top: 32px;
+    top: 0;
+}
+
+#mandos #left{
+    width: 145px;
+    height: 100px;
+    margin-left: 30px;
+    border-bottom: 2px solid #00c0a5;
+    border-top: 2px solid #00c0a5;
+    border-left: 2px solid #00c0a5;
+    border-right: 2px solid #1b2437;
+    background-image: linear-gradient(to right, #00c0a5 45%, #1b2437);
+}
+
+#mandos #rigth{
+    width: 145px;
+    height: 100px;
+    margin-left: 115px;
+    border-bottom: 2px solid #00c0a5;
+    border-top: 2px solid #00c0a5;
+    border-left: 2px solid #1b2437;
+    border-right: 2px solid #00c0a5;
+    background-image: linear-gradient(to left, #00c0a5 45%, #1b2437);
+}
+
+#mandos #down{
+    width: 100px;
+    height: 145px;
+    margin-bottom: 35px;
+    border-top: 2px solid #1b2437;
+    border-bottom: 2px solid #00c0a5;
+    border-left: 2px solid #00c0a5;
+    border-right: 2px solid #00c0a5;
+    background-image: linear-gradient(to top, #00c0a5 45%, #1b2437);
+    position: absolute;
+}
+
+.null{
+    z-index: -5;
+}
+
+#mandos #up:hover{
+    background-color: #1b2437;
+    background-image: none;
+    border: 2px solid #1b2437;
+}
+
+#mandos #down:hover{
+    background-color: #1b2437;
+    background-image: none;
+    border: 2px solid #1b2437;
+}
+
+#mandos #left:hover{
+    background-color: #1b2437;
+    background-image: none;
+    border: 2px solid #1b2437;
+}
+
+#mandos #rigth:hover{
+    background-color: #1b2437;
+    background-image: none;
+    border: 2px solid #1b2437;
+}
+
+.triangulo_sup {
+    width: 0;
+    height: 0;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    border-top: 52px solid #1b2437;
+    position: absolute;
+    display: inline-block;
+    top: 32.8%;
+    margin-left: 0.4%;
+}
+
+.triangulo_der {
+    width: 0;
+    height: 0;
+    border-top: 52px solid transparent;
+    border-left: 52px solid #1b2437;
+    border-bottom: 52px solid transparent;
+    position: absolute;
+    display: inline-block;
+    top: 34%;
+    margin-left: -1.3%;
+}
+
+.triangulo_izq {
+    width: 0;
+    height: 0;
+    border-top: 52px solid transparent;
+    border-right: 52px solid #1b2437;
+    border-bottom: 52px solid transparent;
+    position: absolute;
+    display: inline-block;
+    top: 34%;
+    margin-left: 12.7%;
+}
+
+.triangulo_inf {
+    width: 0;
+    height: 0;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    border-bottom: 52px solid #1b2437;
+    position: absolute;
+    display: inline-block;
+    top: 46%;
+    margin-left: 0.4%;
+}
+
+#mandos #up a, #mandos #left a, #mandos #rigth a, #mandos #down a{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+#mandos #left a, #mandos #rigth a{
+    margin-left: 20px;
+}
+
+#mandos #up a{
+    margin-top: 15px;
+}
+
+#mandos #down a{
+    margin-top: 30px;
+}
+
+.onoff{
+    background-color: #00ff00;
+}

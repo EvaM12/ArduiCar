@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title>lightSensor</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
+    <script src="plotly.min.js"></script>
+
+  </head>
+  <body class="estilo">
+      <h2 id="titulo">Sensor de luz</h2>
+        <p>
+			<label style="padding-left: 50px;">Intensidad: </label>
+			<input type="text" id="proximity" readonly style="border:0; color:#0339fc; font-weight:bold; margin: 5px">
+        </p>
+        <div class="wrapper">
+            <div id="chart" style="width: 85%;"></div>
+            <div id="chart1" style="width: 85%"></div>
+        </div>
+        <script>
+            $(function() {
+                var socket = io.connect("http://localhost:3000");
+                    
+                socket.on('proximity', function(lightSensor){
+                    $("#proximity").val(lightSensor);
+                    console.log($("#proximity").val());
+                });
+            });
+
+            function getData() {
+                return proximity.value;
+            } 
+
+            Plotly.plot('chart',[{
+                y:[getData()],
+                type:'line'
+            }]);
+
+            var cnt = 0;
+            setInterval(function(){
+                Plotly.extendTraces('chart',{ y:[[getData()]]}, [0]);
+                cnt++;
+                if(cnt > 250) {
+                    Plotly.relayout('chart',{
+                        xaxis: {
+                            range: [cnt-250,cnt]
+                        }
+                    });
+                }
+            },1000);
+
+            function getData1() {
+                return Math.random()*100;
+            } 
+
+            Plotly.plot('chart1',[{
+                y:[getData1()],
+                type:'line',
+                //color: '#fefefe',
+                line:{
+                    color: 'red',
+                    width: 4,
+                }
+            }]);
+
+            var cnt = 0;
+            setInterval(function(){
+                Plotly.extendTraces('chart1',{ y:[[getData1()]]}, [0]);
+                cnt++;
+                if(cnt > 250) {
+                    Plotly.relayout('chart1',{
+                        xaxis: {
+                            range: [cnt-250,cnt]
+                        }
+                    });
+                }
+            },1000);
+
+        </script>
+  </body>
+</html>
